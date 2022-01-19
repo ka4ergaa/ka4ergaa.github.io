@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +10,67 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
     
     <link rel="shortcut icon" href="/img/logo.png" type="image/png">
     <title>87 Discord Bot</title>
+    <!-- Google Font "Ubuntu" -->>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <html>
 <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #01010e; z-index: 2000 !important;" id="menu">
+        <a class="navbar-brand hLogo" href="#about"><img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">&#160;Bot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <ul class="navbar-nav my-2 my-lg-0">
+            <li class="nav-item">
+                <a class="nav-link hNav1" href="#main">О боте</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hNav2" href="#invite">Пригласить</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hNav3" href="#functions">Функции</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="main flexC" id="#main">
+        <div class="container">
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <div><h2 class="textTitle" style="color: #522fff;">Eighty&#160;</h2><h2 class="textTitle" style="color:#093fff;">Seven&#160;</h2><h2 class="textTitle" style="float: none; color:#ffd50c;">Bot</h2></div>
+                <h4 class="textDefault">Новый русскоязычный бот для дискорда, которого вы можете пригласить на свой сервер уже сейчас уже сейчас</h4>
+                <button type="button" class="btn btn-primary btnBlueP" href="#invite">Пригласить</button>
+            </div>
+        </div>
+    </div>
+    </nav>
+    <div class="invite flexC" id="#invite">
+        <div class="container">
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <div><h2 class="textTitle" style="color: #522fff;">Eighty&#160;</h2><h2 class="textTitle" style="color:#093fff;">Seven&#160;</h2><h2 class="textTitle" style="float: none; color:#ffd50c;">Bot</h2></div>
+                <h4 class="textDefault">Новый русскоязычный бот для дискорда, которого вы можете пригласить на свой сервер уже сейчас уже сейчас</h4>
+                <button type="button" class="btn btnBlueY" onclick="location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot'" role="button">Пригласить</button>
+            </div>
+        </div>
+    </div>
+    </nav>
+    <div class="functions flexC" id="#functions">
+        <div class="container">
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <div><h2 class="textTitle" style="color: #522fff;">Eighty&#160;</h2><h2 class="textTitle" style="color:#093fff;">Seven&#160;</h2><h2 class="textTitle" style="float: none; color:#ffd50c;">Bot</h2></div>
+                <h4 class="textDefault">Новый русскоязычный бот для дискорда, которого вы можете пригласить на свой сервер уже сейчас уже сейчас</h4>
+                <button type="button" class="btn btnBlueY">Пригласить</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
