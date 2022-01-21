@@ -149,7 +149,7 @@
     border-color: #522fff !important;
     color: #ffffff !important;
     position: relative;
-    left: 50%;
+    left: 32.5%;
     transform: translate(-50%, 0);
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
@@ -169,10 +169,31 @@
     border-color: #522fff !important;
     color: #ffffff !important;
     position: relative;
-    left: 40%;
+    left: 32.5%;
     transform: translate(-50%, 0);
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
+    z-index: 5;
+}
+
+.btnBlueYC{
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 800;
+    background-color: #ffd50c !important;
+    border-color: #ffd50c !important;
+    color: #060621 !important;
+    position: relative;
+    left: 50.1%;
+    bottom: 5vh;
+    transform: translate(-50%, 0);
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
+    z-index: 5;
+}
+
+.btnBlueYC:hover{
+    background-color: #ffe771 !important;
+    border-color: #ffe771 !important;
     z-index: 5;
 }
 
@@ -196,7 +217,7 @@
 .btnBlueP:hover{
     background-color: #846cfa !important;
     border-color: #846cfa !important;
-    z-index: 5; 
+    z-index: 5;
 }   
 
 .unselectable {
