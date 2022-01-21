@@ -70,21 +70,25 @@
     position: relative;
     bottom: 200px;
     left: 800px;
+    z-index: 5;
 }
 .eighteenImg{
     position: relative;
     bottom: 150px;
     left: 500px;
+    z-index: 5;
 }
 .moderationImg{
     position: relative;
     bottom: 150px;
     left: 1000px;
+    z-index: 5;
 }
 .serverImg{
     position: relative;
     bottom: 150px;
     left: 1000px;
+    z-index: 5;
 }
 
 .textDefault{
@@ -92,6 +96,7 @@
     float: left ;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
+    z-index: 5;
 
 }
 
@@ -99,6 +104,7 @@
     float: left ;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
+    z-index: 5;
 
 }
 
@@ -110,11 +116,13 @@
     color: #fff !important;
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
+    z-index: 5;
 }
 
 .btnBlueC:hover{
     background-color: #ffe771 !important;
     border-color: #6e8dfc !important;
+    z-index: 5;
 }
 
 .btnBlueY{
@@ -125,11 +133,13 @@
     color: #060621 !important;
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
+    z-index: 5;
 }
 
 .btnBlueY:hover{
     background-color: #ffe771 !important;
     border-color: #ffe771 !important;
+    z-index: 5;
 }
 
 .btnBluePC2{
@@ -143,11 +153,13 @@
     transform: translate(-50%, 0);
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
+    z-index: 5;
 }
 
 .btnBluePC2:hover{
     background-color: #846cfa !important;
     border-color: #846cfa !important;
+    z-index: 5;
 }
 
 .btnBluePC{
@@ -161,11 +173,13 @@
     transform: translate(-50%, 0);
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
+    z-index: 5;
 }
 
 .btnBluePC:hover{
     background-color: #846cfa !important;
     border-color: #846cfa !important;
+    z-index: 5;
 }
 
 .btnBlueP{
@@ -176,11 +190,13 @@
     color: #fff !important;
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
+    z-index: 5;
 }
 
 .btnBlueP:hover{
     background-color: #846cfa !important;
     border-color: #846cfa !important;
+    z-index: 5;
 }   
 
 .unselectable {
