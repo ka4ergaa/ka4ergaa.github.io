@@ -196,7 +196,7 @@
 .btnBlueP:hover{
     background-color: #846cfa !important;
     border-color: #846cfa !important;
-    z-index: 5;
+    z-index: 5; 
 }   
 
 .unselectable {
