@@ -15,7 +15,7 @@
     width: 100%;
     height: 147.5vh;
     background-size: cover;
-    background-color: #060621;
+    background-color: #060621; 
 }
 .flexC{
     display: flex;
