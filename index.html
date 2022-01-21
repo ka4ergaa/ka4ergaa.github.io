@@ -20,7 +20,7 @@
 </head>
 <html>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #01010e; z-index: 2000 !important;" id="menu">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark unselectable" style="background-color: #01010e; z-index: 2000 !important;" id="menu">
         <a class="navbar-brand hLogo" href="#main"><img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">&#160;Bot</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
           </ul>
         </div>
     </nav>
-    <div class="main flexC" id="main">
+    <div class="main flexC unselectable" id="main">
         <div class="container">
             <div class="col-lg-8 col-md-6 col-sm-12">
                 <div><h2 class="textTitle" style="color: #522fff;">Eighty</h2><h2 class="textTitle" style="color:#093fff;">Seven&#160;</h2><h2 class="textTitle" style="float: none; color:#ffd50c;">Bot</h2></div>
@@ -51,7 +51,7 @@
         </div>
     </div>
     </nav>
-    <div class="functions flexC">
+    <div class="functions flexC unselectable">
         <div class="container">
             <div class="col-lg-8 col-md-6 col-sm-12">
                 <div><h2 class="textTitle" id="functions" style="float: none; color:#ffd50c;">&#160;</h2></div>
@@ -65,30 +65,34 @@
                 <img class="eighteenImg" onclick="location.href = 'https://youtu.be/dQw4w9WgXcQ'" src="/img/18+.png" width="256" height="256">
                 <div><h2 class="textTitle" style="float: none; color:#ffffff;">Модерирование</h2></div>
                 <h4 class="textDefault">Проверка информации о пользователе, очистка чата, а так-же возможность писать от имени бота</h4>
-                <img class="moderationImg" src="/img/es-moderation.PNG" width="355" height="183">
+                <img class="moderationImg" style="pointer-events: none;" src="/img/es-moderation.PNG" width="355" height="183">
                 <div><h2 class="textTitle" style="float: none; color:#ffffff;">Серверные команды</h2></div>
                 <h4 class="textDefault">EightySeven может проверить задержку, узнать информацию о сервере и получить ссылку на аватары других пользователей</h4>
-                <img class="serverImg" src="/img/es-server.PNG" width="355" height="183">
+                <img class="serverImg" style="pointer-events: none;" src="/img/es-server.PNG" width="355" height="183">
             </div>
         </div>
     </div>
     </nav>
-    <div class="invite flexC">
-        <div class="container">
-            <div class="col-lg-8 col-md-6 col-sm-12">
-                <div><h2 class="textTitle" id="invite" style="float: none; color:#ffd50c;">&#160;</h2></div>
-                <div><h2 class="textTitle" style="float: none; color:#ffd50c;">&#160;</h2></div>
-                <div><h2 class="textTitle" style="float: none; color:#ffd50c;">Пригласить</h2></div>
-                <h4 class="textDefault">Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!</h4>
-                <button type="button" class="btn btnBlueY" onclick="location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot'" role="button"><img src="/img/discord-logo-black.png" width="25" height="25" class="d-inline-block align-top" alt=""> Пригласить</button>
-            </div>
+        <div class="bottom unselectable" id="bottom">
+            <button type="button" class="btn btnBluePC" onclick="location.href = 'https://discord.gg/hxFzcYWhhd'" role="button"><img src="/img/discord-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Наш Discord сервер</button>&#160; &#160;<button type="button" class="btn btnBluePC2" onclick="location.href = 'https://top.gg/bot/830474088073134142'" role="button"><img src="/img/top_gg-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Голосуйте за нас на top.gg</button>
+            <p class="fig"><img style="z-index: 5;" src="/img/wave-bot.png" width="1903" height="219">
         </div>
-    </div>
-    </nav>
-    <div class="bottom" id="bottom">
-        <button type="button" class="btn btnBluePC" onclick="location.href = 'https://discord.gg/hxFzcYWhhd'" role="button"><img src="/img/discord-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Наш Discord сервер</button>&#160; &#160;<button type="button" class="btn btnBluePC2" onclick="location.href = 'https://top.gg/bot/830474088073134142'" role="button"><img src="/img/top_gg-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Голосуйте за нас на top.gg</button>
-        <p class="fig"><img src="/img/wave-bot.png" width="1903" height="219">
-    </div>
-    </div>
+        </div>
+    
+    
+    <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+        </div >
 </body>
 </html>
