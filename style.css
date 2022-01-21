@@ -1,15 +1,21 @@
 .main{
     width: 100%;
-    height: 97.5vh;
+    height: 95.5vh;
     background-size: cover;
     background-image: linear-gradient(to bottom, #01010e 15%, #060621 85%);
 }
 
+.bottom{
+    width: 100%;
+    height: 20.5vh;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, #060621 15%, #01010e 85%);
+  }
 .functions{
     width: 100%;
-    height: 97.5vh;
+    height: 147.5vh;
     background-size: cover;
-    background-color: #01010e;
+    background-color: #060621;
 }
 .invite{
     width: 100%;
@@ -49,7 +55,7 @@
 }
 
 .hNav2:hover{
-    color: #093fff !important;
+    color: #ffd50c !important;
 }
 
 .hNav3{
@@ -61,11 +67,38 @@
 }
 
 .hNav3:hover{
-    color: #ffd50c !important;
+    color: #093fff !important;
 }
+
+/* background-color: #01010e; */
+
+.musicImg{
+    position: relative;
+    bottom: 200px;
+    left: 800px;
+}
+.eighteenImg{
+    position: relative;
+    bottom: 150px;
+    left: 500px;
+}
+.moderationImg{
+    position: relative;
+    bottom: 150px;
+    left: 1000px;
+}
+.serverImg{
+    position: relative;
+    bottom: 150px;
+    left: 1000px;
+}
+
 .textDefault{
     color: #ffffff;
+    float: left ;
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+
 }
 
 .textTitle{
@@ -81,18 +114,77 @@
     background-color: #093fff !important;
     border-color: #093fff !important;
     color: #fff !important;
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
 }
+
+.btnBlueC:hover{
+    background-color: #ffe771 !important;
+    border-color: #6e8dfc !important;
+}
+
 .btnBlueY{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
     background-color: #ffd50c !important;
     border-color: #ffd50c !important;
     color: #060621 !important;
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
 }
+
+.btnBlueY:hover{
+    background-color: #ffe771 !important;
+    border-color: #ffe771 !important;
+}
+
+.btnBluePC2{
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 800;
+    background-color: #522fff !important;
+    border-color: #522fff !important;
+    color: #ffffff !important;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
+}
+
+.btnBluePC2:hover{
+    background-color: #846cfa !important;
+    border-color: #846cfa !important;
+}
+
+.btnBluePC{
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 800;
+    background-color: #522fff !important;
+    border-color: #522fff !important;
+    color: #ffffff !important;
+    position: relative;
+    left: 40%;
+    transform: translate(-50%, 0);
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
+}
+
+.btnBluePC:hover{
+    background-color: #846cfa !important;
+    border-color: #846cfa !important;
+}
+
 .btnBlueP{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
     background-color: #522fff !important;
     border-color: #522fff !important;
     color: #fff !important;
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
 }
+
+.btnBlueP:hover{
+    background-color: #846cfa !important;
+    border-color: #846cfa !important;
+}   
