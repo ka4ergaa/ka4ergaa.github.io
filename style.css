@@ -2,17 +2,28 @@
     width: 100%;
     height: 95.5vh;
     background-size: cover;
-    background-image: linear-gradient(to bottom, #01010e 15%, #060621 85%);
+    background-color: #1c4343;
 }  
+
+
 
 .pageNotFound{
     width: 100%;
     height: 95.5vh;
     background-size: cover;
-    background-image: linear-gradient(to bottom, #01010e 15%, #060621 85%);
+    background-color: #18181b;
 }
 .pageNotFoundText {
     text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    z-index: 5;
+}
+
+.background1Text {
+    position: absolute;
+    top: 2425px;
+    left: 38%;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     z-index: 5;
@@ -29,8 +40,17 @@
     width: 100%;
     height: 20.5vh;
     background-size: cover;
-    background-image: linear-gradient(to bottom, #060621 15%, #01010e 85%);
+    background-color: #18181b;
+    z-index: 5;
   }
+
+.background1{
+    width: 100%;
+    height: 50.5vh;
+    background-size: cover;
+    background-color: #18181b;
+    z-index: 5;
+}
 
 .invite1{
     position: absolute;
@@ -38,14 +58,14 @@
     width: 100%;
     height: 20.5vh;
     background-size: cover;
-    background-color: #060621;
+    background-color: #18181b;
 }     
 
 .functions{
     width: 100%;
     height: 147.5vh;
     background-size: cover;
-    background-color: #060621;
+    background-color: #18181b;
 }
 .flexC{
     display: flex;
@@ -67,7 +87,7 @@
     transition: color 0.220s linear !important;
 }
 .hNav1:hover{
-    color: #522fff !important;
+    color: #14ad9d !important;
 }
 
 .hNav2{
@@ -79,7 +99,7 @@
 }
 
 .hNav2:hover{
-    color: #ffd50c !important;
+    color: #14ad9d !important;
 }
 
 .hNav3{
@@ -91,7 +111,7 @@
 }
 
 .hNav3:hover{
-    color: #093fff !important;
+    color: #14ad9d !important;
 }
 
 /* background-color: #01010e; */
@@ -122,7 +142,7 @@
 }
 
 .textDefault{
-    color: #ffffff;
+    color: #e0e0e3;
     float: left ;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
@@ -142,8 +162,8 @@
 .btnBlueC{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
-    background-color: #093fff !important;
-    border-color: #093fff !important;
+    background-color: #0d9488 !important;
+    border-color: #0d9488 !important;
     color: #fff !important;
     border-radius: 10px;
     transition: background-color 0.220s linear !important;
@@ -152,17 +172,17 @@
 }
 
 .btnBlueC:hover{
-    background-color: #ffe771 !important;
-    border-color: #6e8dfc !important;
+    background-color: #0f766e !important;
+    border-color: #0f766e !important;
     z-index: 5;
 }
 
 .btnBlueY{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
-    background-color: #ffd50c !important;
-    border-color: #ffd50c !important;
-    color: #060621 !important;
+    background-color: #f4f4f4 !important;
+    border-color: #f4f4f4 !important;
+    color: #18181b !important;
     border-radius: 10px;
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
@@ -170,19 +190,20 @@
 }
 
 .btnBlueY:hover{
-    background-color: #ffe771 !important;
-    border-color: #ffe771 !important;
+    background-color: #e4e4e7 !important;
+    border-color: #e4e4e7 !important;
     z-index: 5;
 }
 
 .btnBluePC2{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
-    background-color: #522fff !important;
-    border-color: #522fff !important;
+    background-color: #0d9488 !important;
+    border-color: #0d9488 !important;
     color: #ffffff !important;
     border-radius: 10px;
     position: relative;
+    bottom: 100px;
     left: 32.5%;
     transform: translate(-50%, 0);
     transition: background-color 0.220s linear !important;
@@ -193,8 +214,8 @@
 .btnBluePC2PNF{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
-    background-color: #522fff !important;
-    border-color: #522fff !important;
+    background-color: #0d9488 !important;
+    border-color: #0d9488 !important;
     color: #ffffff !important;
     border-radius: 10px;
     position: relative;
@@ -205,26 +226,29 @@
     z-index: 5;
 }
 
+
+
 .btnBluePC2:hover{
-    background-color: #846cfa !important;
-    border-color: #846cfa !important;
+    background-color: #0f766e !important;
+    border-color: #0f766e !important;
     z-index: 5;
 }
 
 .btnBluePC2PNF:hover{
-    background-color: #846cfa !important;
-    border-color: #846cfa !important;
+    background-color: #0f766e !important;
+    border-color: #0f766e !important;
     z-index: 5;
 }
 
 .btnBluePC{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
-    background-color: #522fff !important;
-    border-color: #522fff !important;
+    background-color: #0d9488 !important;
+    border-color: #0d9488 !important;
     color: #ffffff !important;
     position: relative;
     left: 32.5%;
+    bottom: 100px;
     transform: translate(-50%, 0);
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
@@ -234,13 +258,13 @@
 .btnBlueYC{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
-    background-color: #ffd50c !important;
-    border-color: #ffd50c !important;
-    color: #060621 !important;
+    background-color: #f4f4f4 !important;
+    border-color: #f4f4f4 !important;
+    color: #18181b !important;
     border-radius: 10px;
     position: relative;
     left: 50.1%;
-    bottom: 5vh;
+    bottom: 150px;
     transform: translate(-50%, 0);
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
@@ -248,31 +272,49 @@
 }
 
 .btnBlueYC:hover{
-    background-color: #ffe771 !important;
-    border-color: #ffe771 !important;
+    background-color: #e4e4e7 !important;
+    border-color: #e4e4e7 !important;
     z-index: 5;
 }
 
 .btnBluePC:hover{
-    background-color: #846cfa !important;
-    border-color: #846cfa !important;
+    background-color: #0f766e !important;
+    border-color: #0f766e !important;
     z-index: 5;
 }
 
 .btnBlueP{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
-    background-color: #522fff !important;
-    border-color: #522fff !important;
+    background-color: #0d9488 !important;
+    border-color: #0d9488 !important;
     color: #fff !important;
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
     z-index: 5;
 }
 
+.btnBluePW{
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 800;
+    background-color: #f4f4f4 !important;
+    border-color: #f4f4f4 !important;
+    border: none;
+    color: #18181b !important;
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
+    z-index: 5;
+}
+
+.btnBluePW:hover{
+    background-color: #e4e4e7 !important;
+    border-color: #e4e4e7 !important;
+    z-index: 5;
+}
+
 .btnBlueP:hover{
-    background-color: #846cfa !important;
-    border-color: #846cfa !important;
+    background-color: #0f766e !important;
+    border-color: #0f766e !important;
     z-index: 5;
 }   
 
@@ -307,7 +349,7 @@
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover{
-    color: #ffd50c !important;
+    color: #14ad9d !important;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -366,7 +408,7 @@ html {
       top: 0;
       left: 0;
       width: 100%;
-      height: 270vh;
+      height: 310vh;
       overflow: hidden;
   }
   
@@ -376,7 +418,7 @@ html {
       list-style: none;
       width: 20px;
       height: 20px;
-      background: rgba(82, 47, 255, 0.2);
+      background: rgba(13, 148, 137, 0.2);
       animation: animate 25s linear infinite;
       bottom: 0vh;
   }
@@ -473,7 +515,7 @@ html {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(82, 47, 255, 0.2);
+    background: rgba(13, 148, 137, 0.2);
     animation: animate1 25s linear infinite;
     bottom: 0vh;
 }
@@ -564,7 +606,7 @@ html {
       }
   
       100%{
-          transform: translateY(-2400px) rotate(720deg);
+          transform: translateY(-2700px) rotate(720deg);
           opacity: 0;
           border-radius: 50%;
       }
@@ -585,4 +627,21 @@ html {
         border-radius: 50%;
     }
 
+}
+
+
+
+
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 6px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: #27272a;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #0d9488;
+    border-radius: 9em;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css" id="theme-link">
+    <link rel="stylesheet" href="style.css">
     <script src="/script.js"></script>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -49,9 +49,9 @@
     <div class="main flexC unselectable" id="main">
         <div class="container">
             <div class="col-lg-8 col-md-6 col-sm-12">
-                <div><h2 class="textTitle" style="color: #522fff;">Eighty</h2><h2 class="textTitle" style="color:#093fff;">Seven&#160;</h2><h2 class="textTitle" style="float: none; color:#ffd50c;">Bot</h2></div>
+                <div><h2 class="textTitle" style="color: #f4f4f4;">Eighty</h2><h2 class="textTitle" style="color:#f4f4f4;">Seven&#160;</h2><h2 class="textTitle" style="float: none; color:#f4f4f4;">Bot</h2></div>
                 <h4 class="textDefault">Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!</h4>
-                <button type="button" class="btn btn-primary btnBlueP" onclick="location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot'"><img src="/img/discord-logo.png" width="25" height="24" class="d-inline-block align-top" alt=""> Добавить в Discord</button>&#160; &#160;<button type="button" class="btn btn-primary btnBlueP" onclick="location.href = '#functions';"><img src="/img/down.png" width="25" height="23" class="d-inline-block align-top" alt=""> Перейти к функциям
+                <button type="button" class="btn btn-primary btnBlueP" style="border-radius: 10px;" onclick="location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot'"><img src="/img/discord-logo.png" width="25" height="24" class="d-inline-block align-top" alt=""> Добавить в Discord</button>&#160; &#160;<button type="button" class="btn btn-primary btnBluePW" style="border-radius: 10px;" onclick="location.href = '#functions';"><img src="/img/down-black.png" width="25" height="24" class="d-inline-block align-top" alt=""> Перейти к функциям
             </div>
         </div>
     </div>
@@ -59,29 +59,35 @@
     <div class="functions flexC unselectable">
         <div class="container">
             <div class="col-lg-8 col-md-6 col-sm-12">
-                <div><h2 class="textTitle" id="functions" style="float: none; color:#ffd50c;">&#160;</h2></div>
-                <div><h2 class="textTitle" style="float: none; color:#ffd50c;">&#160;</h2></div>
-                <div><h2 class="textTitle" style="float: none; color:#ffd50c;">Функции</h2></div>
-                <div><h2 class="textTitle" style="float: none; color:#ffffff;">Музыка</h2></div>
+                <div><h2 class="textTitle" id="functions" style="float: none; color:#f4f4f4;">&#160;</h2></div>
+                <div><h2 class="textTitle" style="float: none; color:#f4f4f4;">&#160;</h2></div>
+                <div><h2 class="textTitle" style="float: none; color:#f4f4f4;">Функции</h2></div>
+                <div><h2 class="textTitle" style="float: none; color:#0d9488;">Музыка</h2></div>
                 <h4 class="textDefault">Бесплатное воспроизведение музыки с YouTube для всех серверов одновременно! Система очередей, пропуск треков, их повтор, а так-же регулировка громкости</h4>
-                <img class="musicImg" src="/img/es-music.PNG" onclick="location.href = `https://youtu.be/kjtL_EFQEGA`" width="793" height="354">
-                <div><h2 class="textTitle" style="float: none; color:#ffffff;">NSFW команды</h2></div>
+                <img class="musicImg" src="/img/es-music.PNG" style="pointer-events: none;" onclick="location.href = `https://youtu.be/kjtL_EFQEGA`" width="793" height="354">
+                <div><h2 class="textTitle" style="float: none; color:#0d9488;">NSFW команды</h2></div>
                 <h4 class="textDefault">Команды, работающие только в NSFW каналах</h4>
-                <img class="eighteenImg" onclick="location.href = 'https://youtu.be/dQw4w9WgXcQ'" src="/img/18+.png" width="256" height="256">
-                <div><h2 class="textTitle" style="float: none; color:#ffffff;">Модерирование</h2></div>
+                <img class="eighteenImg" style="pointer-events: none;" onclick="location.href = 'https://youtu.be/dQw4w9WgXcQ'" src="/img/18+.png" width="256" height="256">
+                <div><h2 class="textTitle" style="float: none; color:#0d9488;">Модерирование</h2></div>
                 <h4 class="textDefault">Проверка информации о пользователе, очистка чата, а так-же возможность писать от имени бота</h4>
                 <img class="moderationImg" style="pointer-events: none;" src="/img/es-moderation.PNG" width="355" height="183">
-                <div><h2 class="textTitle" style="float: none; color:#ffffff;">Серверные команды</h2></div>
+                <div><h2 class="textTitle" style="float: none; color:#0d9488;">Серверные команды</h2></div>
                 <h4 class="textDefault">EightySeven может проверить задержку, узнать информацию о сервере и получить ссылку на аватары других пользователей</h4>
                 <img class="serverImg" style="pointer-events: none;" src="/img/es-server.PNG" width="355" height="183">
             </div>
         </div>
     </div>
     </nav>
+    <div class="background1 unselectable">
+        <h4 class="background1Text" style="color: #f4f4f4;">Приглашаем Вас присоединится к нам!</h4>
+        <img style="z-index: 5; pointer-events: none;" src="/img/background1.png" width="1915" height="305">
+        <button type="button" class="btn btnBlueYC" style="border-radius: 10px;" onclick="location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot'" role="button"><img src="/img/discord-logo-black.png" width="25" height="25" class="d-inline-block align-top" alt=""> Пригласить на сервер</button>
+        <button type="button" class ="btn btnBluePC" style="border-radius: 10px;" onclick="location.href = 'https://discord.gg/hxFzcYWhhd'" role="button"><img src="/img/discord-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Наш Discord сервер</button>&#160; &#160;<button type="button" class="btn btnBluePC2" style="border-radius: 10px;" onclick="location.href = 'https://top.gg/bot/830474088073134142'" role="button"><img src="/img/top_gg-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Голосуйте за нас</button>
+    </div>
+    </div>
+    </nav>
         <div class="invite unselectable" id="invite">
-            <button type="button" class="btn btnBlueYC" onclick="location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot'" role="button"><img src="/img/discord-logo-black.png" width="25" height="25" class="d-inline-block align-top" alt=""> Пригласить на сервер</button>
-            <button type="button" class="btn btnBluePC" onclick="location.href = 'https://discord.gg/hxFzcYWhhd'" role="button"><img src="/img/discord-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Наш Discord сервер</button>&#160; &#160;<button type="button" class="btn btnBluePC2" onclick="location.href = 'https://top.gg/bot/830474088073134142'" role="button"><img src="/img/top_gg-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Голосуйте за нас</button>
-            <img style="z-index: 5; pointer-events: none;" src="/img/wave-bot.png" width="1903" height="219">
+            <img style="z-index: 5; pointer-events: none;" src="/img/wave-bot.png" width="1915" height="219">
         </div>
         </div>
     
