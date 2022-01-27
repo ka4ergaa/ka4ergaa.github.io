@@ -159,6 +159,14 @@
 
 }
 
+.textTitle::selection {
+    background-color: #e0e0e3;
+}
+
+.textDefault::selection {
+    background-color: #0d9488;
+}
+
 .btnBlueC{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 800;
