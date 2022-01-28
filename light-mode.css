@@ -365,7 +365,7 @@
 
 
 
-.dropbtn {
+  .dropbtn {
     position: absolute;
     bottom: 15px;
     color: #27272a;
@@ -392,9 +392,10 @@
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     top: 50px;
+    color: #27272a;
     display: none;
     position: absolute;
-    background-color: #f4f4f4;
+    background-color: #27272a;
     border-radius: 10px;
     min-width: 160px;
     z-index: 1;
@@ -406,6 +407,13 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: #f4f4f4;
+    background-color: #3f3f46;
+    border-radius: 10px;
 }
 
 /* Change color of dropdown links on hover */
