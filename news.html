@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
     <script src="/script.js"></script>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,31 +21,39 @@
 </head>
 <html>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark unselectable" style="background-color: hsla(0, 0%, 0%, 0.150); backdrop-filter: blur(5px); z-index: 2000 !important;" id="menu">
+    <nav class="navbar navbar1 fixed-top navbar-expand-lg navbar-dark unselectable" id="menu">
         <a class="navbar-brand hLogo" href="#main"><img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">&#160;Bot</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-          </ul>
-          <ul class="navbar-nav my-2 my-lg-0">
-            <li class="nav-item">
-                <a class="nav-link hNav1" href="#main">Главная</a>
-            </li>
-            <li class="nav-item">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active hNav1" href="#main">Главная</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link hNav3" href="#functions">Функции</a>
-            </li>
-            <li class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a class="nav-link hNav2"href="https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot">Пригласить</a>
-            <li class="nav-item">
-                <button onclick="myFunction()" class="dropbtn">Сообщество <svg stroke="currentColor" style="position: absolute; top: 5px; left: 130px;" fill="none" stroke-width="0" viewBox="0 0 24 24" class="text-opacity-70 ml-2 h-4 w-4" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="https://discord.gg/hxFzcYWhhd"><img src="/img/discord-logo.png" width="25" height="25" class="d-inline-block align-top" alt=""> Discord</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle hNav2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Сообщество
+                </a>
+                <ul class="dropdown-menu" style="background-color: #27272a;" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown1" href="https://discord.gg/hxFzcYWhhd"><img src="/img/discord-logo.png" width="25" height="25" class="d-inline-block align-top" alt="">Discord</a></li>
+                  <li><a class="dropdown1" href="https://top.gg/bot/830474088073134142"><img src="/img/top_gg-logo.png" width="25" height="25" class="d-inline-block align-top" alt="">Голосуйте за нас</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hNav2" type="button" id="switchMode" style="position: absolute; right: 0.5%;">Сменить тему</a>
+                <script src="js/theme.js"></script>
             </li>
-          </ul>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
     <div class="pageNotFound unselectable">
             <div><h2 class="pageNotFoundText" style="color: #ffd50c; font-size: 100px;">Новости</h2></div>
             <div><h2 class="pageNotFoundTextD" style="color: #ffffff;">Здесь находятся все самые свежие новости<br>
@@ -55,7 +63,8 @@
                 <br>
                 <br>
                 <br>
-                Здесь ещё ничего нет ;(</h2></div>
+                • Добавлены NSFW команды. Подробнее в es!help</h2></div>
+            <div><h2 class="date" style="color: #4b4b4b;">17.01.2022</h2></div>
     </div>
     </nav>
     <div class="invite1 unselectable">

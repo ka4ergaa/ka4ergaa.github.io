@@ -416,12 +416,25 @@
     border-radius: 10px;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown1{
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
     color: #f4f4f4;
-    background-color: #3f3f46;
-    border-radius: 10px;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
+
+.dropdown1:hover{
+    background-color: #3f3f46;
+    color: #f4f4f4;
+}
+
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
