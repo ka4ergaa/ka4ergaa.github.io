@@ -78,6 +78,7 @@
     height: 147.5vh;
     background-size: cover;
     background-color: #18181b;
+    transition: background-color 0.220s linear !important;
 }
 
 .flexC{
