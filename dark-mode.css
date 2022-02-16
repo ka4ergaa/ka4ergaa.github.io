@@ -17,6 +17,7 @@
     background-color: hsla(0, 0%, 0%, 0.150);
     backdrop-filter: blur(5px);
     z-index: 2000 !important;
+    transition: background-color 0.220s linear !important;
 }
 
 .pageNotFound{
@@ -24,6 +25,7 @@
     height: 95.5vh;
     background-size: cover;
     background-color: #18181b;
+    transition: background-color 0.220s linear !important;
 }
 .pageNotFoundText {
     text-align: center;
@@ -54,6 +56,7 @@
     background-size: cover;
     background-color: #18181b;
     z-index: 5;
+    transition: background-color 0.220s linear !important;
   }
 
 .background1{
@@ -62,6 +65,7 @@
     background-size: cover;
     background-color: #18181b;
     z-index: 5;
+    transition: background-color 0.220s linear !important;
 }
 
 .invite1{
@@ -71,6 +75,7 @@
     height: 20.5vh;
     background-size: cover;
     background-color: #18181b;
+    transition: background-color 0.220s linear !important;
 }     
 
 .functions{
@@ -697,6 +702,7 @@ html {
     width: 6px; /* ширина для вертикального скролла */
     height: 8px; /* высота для горизонтального скролла */
     background-color: #27272a;
+    transition: background-color 0.220s linear !important;
 }
 
 /* ползунок скроллбара */
