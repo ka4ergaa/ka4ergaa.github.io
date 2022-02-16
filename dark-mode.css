@@ -5,6 +5,13 @@
     background-color: #1c4343;
 }  
 
+.invitelink{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-color: #1c4343;
+}  
+
 .com{
     color: #ffffff !important;
     font-family: 'Ubuntu', sans-serif;
