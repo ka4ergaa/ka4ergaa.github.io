@@ -32,7 +32,7 @@
   
           //do something later when date is reached
           if (distance < 0) {
-            window.location.href = "./index.html"
+            window.location.href = "https://eightyseven.ru/"
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
