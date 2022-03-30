@@ -44,6 +44,13 @@
     background-color: #1c4343;
 }  
 
+.ka4ergaa{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-color: #202020;
+}  
+
 .invitelink{
     width: 100%;
     height: 100vh;
@@ -406,6 +413,39 @@
     color: #fff !important;
     transition: background-color 0.220s linear !important;
     transition: border-color 0.220s linear !important;
+    z-index: 5;
+}
+
+.btnBlueP2{
+    font-family: Jost;
+    font-weight: 700;
+    background-color: #0d9488 !important;
+    border-color: #0d9488 !important;
+    color: #ffffff !important;
+    transition: background-color 0.220s linear !important;
+    transition: border-color 0.220s linear !important;
+    transition: color 0.220s linear !important;
+    z-index: 5;
+}
+
+.btnBlueP2:hover{
+    background-color: #0f766e !important;
+    border-color: #0f766e !important;
+    color: #ffffff !important;
+    z-index: 5;
+}
+
+.btnBluePA{
+    font-family: Jost;
+    font-weight: 700;
+    background-color: #0d948900 !important;
+    border-color: #0d948900 !important;
+    color: #fff !important;
+    z-index: 5;
+}
+
+.btnBluePA:hover{
+    color: #cfcfcf !important;
     z-index: 5;
 }
 

@@ -1,39 +1,179 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="dark-mode.css">
-    <script src="js/script.js"></script>
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+<!-- saved from url=(0023)https://vrp.network/pay -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
-    <title>Добавить в Discord</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium | Network</title>
+    <link rel="shortcut icon" href="https://vrp.network/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./redirect.css">
+    <link rel="stylesheet" href="./js/bootstrap.css">
 
-    <!-- Google Font "Ubuntu" -->>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script>
+        setTimeout(function(){
+            location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot';
+        }, 2000);
+    </script>
 
-    <!-- Links -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ka4ergaa.github.io/invite">
-    <meta property="og:title" content="EightySeven | Discord Bot">
-    <meta property="og:description" content="Пригласить бота EightySeven на сервер">
-    <meta property="og:image" content="/img/logo.png">
+    <style>
+        .form_radio label {
+            margin: 0;
+        }
 
-    <meta http-equiv="refresh" content="0;https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot">
+        .form_radio {
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            width: 130px;
+            background: #1c1c1c;
+            align-items: center;
+            border-radius: .25rem;
+        }
+
+        .form_radio input[type=radio] {
+            display: none;
+        }
+
+        .form_radio label {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            padding-left: 30px;
+            margin-right: 0;
+            line-height: 18px;
+            user-select: none;
+        }
+
+        .form_radio label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            background: url(assets/img/radio-off.png) 0 0 no-repeat;
+        }
+
+        .form_radio input[type=radio]:checked+label:before {
+            background: url(assets/img/radio-on.png) 0 0 no-repeat;
+        }
+
+        .form_radio label:hover:before {
+            filter: brightness(120%);
+        }
+
+        .form_radio input[type=radio]:disabled+label:before {
+            filter: grayscale(100%);
+        }
+
+        @media screen and (max-width: 768px) {
+            .form_radio {
+                margin: auto;
+                margin-bottom: 10px;
+                float: none !important;
+            }
+        }
+
+        .pay-option img {
+            max-width: 90px;
+        }
+
+        #btn-cloudpayments {
+            cursor: pointer;
+        }
+
+        .days-outer {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form_radio {
+            width: 250px;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .days-outer .discount {
+            margin-left: 10px;
+            padding: 4px 6px;
+            border-radius: 6px;
+            background: #FD3A45;
+        }
+
+        .form_radio div span:nth-child(1) {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-decoration-line: line-through;
+            color: #666666;
+        }
+
+        .form_radio div span:nth-child(2) {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 7px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .form_radio {
+                margin-bottom: 0px !important;
+            }
+        }
+
+        label {
+            cursor: pointer;
+            margin: 0;
+        }
+
+        iframe {
+            background-color: #111111;
+        }
+
+        div[id^=cloudpayments-loading] {
+            background-color: #111111 !important;
+        }
+        
+    </style>
+
+    <!-- <meta http-equiv="refresh" content="0;https://discord.com/invite/hxFzcYWhhd"> -->
 </head>
-<div class="flexC unselectable">
-    <div class="container">
-        <div class="col-lg-8 col-md-6 col-sm-12">
-            <div><h2 class="textTitle" style="color: #f4f4f4;">Eighty</h2><h2 class="textTitle" style="color:#f4f4f4;">Seven&#160;</h2><h2 class="textTitle" style="float: none; color:#f4f4f4;">Bot</h2></div>
-            <h4 class="textMainDescription">Переадресация...</h4>
+
+<body class="py-page" style="overflow: hidden;">
+    
+    <div class="container-fluid">
+        <div class="col-md-12 payed-zone">
+            <div class="payed m-auto">
+                <div class="text-center">
+
+                    <div id="load" class="" style="display: block;">
+                        <div class="banter-loader" style="top: 50px">
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                            <div class="banter-loader__box"></div>
+                          </div>
+                          <h4>&#160;</h4>
+                          <h4>&#160;</h4>
+                        <h4>Переадресация...</h4>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
+        <script src="./js/jquery.js"></script>
+        <script src="./js/bootstrap.js"></script>
+        <script src="./js/bodymovin.js"></script>
+        <script src="./js/cloudpayments"></script>
+        
+        <script src="./js/pay36-ru-ru.min.js"></script>
+
+
+</div></body></html>
