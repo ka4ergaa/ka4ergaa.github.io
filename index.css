@@ -615,7 +615,7 @@ section {
   transform: translateY(-50%);
   display: block;
   font-size: 1.1rem;
-  font-family: 'Jost';
+  font-family: FontAwesome;
 }
 
 .collapsible-link[aria-expanded="true"]::before {
