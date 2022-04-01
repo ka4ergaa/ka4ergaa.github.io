@@ -48,9 +48,6 @@ $(window).on("load", function () {
     }) */
 });
 
-$('.download_link').on('click', function(){
-    window.open('https://vrp.network/graphics');
-});
 
 $(".fa-play").click(function () {
     videoPlay();
@@ -119,31 +116,3 @@ function scrolling() {
         lastHeight = currentHeight;
     }
 }
-function loader() {
-    $.ajax({
-        type: "POST",
-        url: "https://ntwredux.ru/generate.php",
-        data: {
-            type: "modsoffset",
-            count: count,
-            begin: begin * count,
-        },
-        success: onAjaxSuccess,
-    });
-    function onAjaxSuccess(data) {
-        $(".library-out").append(data);
-        setTimeout(() => {
-            $(".library-out").css("opacity", 1.0);
-        }, 500);
-        $(".scroll").on("scroll", scrolling);
-    }
-    begin++;
-}
-
-$(function(){
-        $("a[href^='mods#']").click(function(){
-                var _href = $(this).attr("href").replace('mods', '');
-                $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-                return false;
-        });
-});
