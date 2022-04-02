@@ -273,6 +273,10 @@ section {
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .cost-block {
   background-image: url(./img/bg.JPG);
   background-size: cover;
