@@ -291,7 +291,7 @@ section {
 
 .tariff {
   background-color: #FFF;
-  height: 250px;
+  height: 280px;
   width: 350px;
   max-height: 100vh;
   color: #000;
@@ -360,14 +360,14 @@ section {
 
 .tariff .plus a {
   cursor: unset;
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .tariff .plus a p {
   font-family: 'Jost' !important;
   font-size: 18px !important;
   line-height: 22px !important;
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .tariff .bottom {
@@ -869,12 +869,12 @@ input:focus, textarea:focus, select:focus {
   border: 1px solid #dc3545 !important;
 }
 
-#graphic .carousel-item {
+#commands .carousel-item {
     position: relative;
     padding-bottom: 44.8959%;
 }
 
-#graphic .carousel-item iframe {
+#commands .carousel-item iframe {
     position: absolute;
     top: 0;
     left: 0;
