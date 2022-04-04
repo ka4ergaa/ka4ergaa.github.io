@@ -295,7 +295,7 @@ html {
 
 .tariff {
   background-color: #FFF;
-  height: 410px;
+  height: 585px;
   width: 350px;
   max-height: 100vh;
   color: #000;
@@ -327,7 +327,7 @@ html {
 }
 
 .tariff .cost {
-  color: #000;
+  color: #fff;
   display: flex;
   margin: 0 20px;
   align-items: center;
@@ -390,6 +390,8 @@ html {
 .tariff .tariff-bronze, .icon-bronze {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), linear-gradient(31.17deg, #7289da -20.47%, #86a0fa 17.59%, #b4c5ff 75.03%, #86a0fa 117.68%, #86a0fa 153.63%);
 }
+
+.tariff .tariff-bronze1,.icon-bronze1{background:linear-gradient(0deg,rgba(0,0,0,.05),rgba(0,0,0,.05)),linear-gradient(31.17deg,#eccba9 -20.47%,#f19f5b 17.59%,#e17f32 75.03%,#f19f5b 117.68%,#ffc494 153.63%)}.icon-bronze1{background:linear-gradient(46.12deg,#eccba9 14.3%,#f19f5b 30.62%,#e17f32 50.6%,#f19f5b 71.14%,#ffc494 85.7%)}
 
 .icon-bronze {
   background: linear-gradient(46.12deg, #86a0fa 14.3%, #7289da 30.62%, #b4c5ff 50.6%, #7289da 71.14%, #86a0fa 85.7%);
