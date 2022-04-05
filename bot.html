@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿---
+permalink: /bot/
+---
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -885,6 +888,18 @@
         $(window).on('resize', function() {
             $('.tariffs-discount').css('width', $('.tariffs-block').width() - 60);
         })
+
+        function remove_hash_from_url()
+{
+    var uri = window.location.toString();
+    if (uri.indexOf("#") > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf("#"));
+        window.history.replaceState({}, document.title, clean_uri);
+    }
+}
+
+window.onhashchange = remove_hash_from_url;
+
     </script>
     
 </body>
