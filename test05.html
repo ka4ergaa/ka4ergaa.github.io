@@ -885,6 +885,8 @@
         $(window).on('resize', function() {
             $('.tariffs-discount').css('width', $('.tariffs-block').width() - 60);
         })
+
+        window.location = window.location.href.substr(0, window.location.href.indexOf("#"));
     </script>
     
 </body>
