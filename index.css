@@ -223,7 +223,7 @@ section {
 
 .header-outer {
   height: 800px;
-  background: linear-gradient(0deg, rgba(28, 28, 28, 0.5), rgba(28, 28, 28, 0.5)), url("./img/background1.png");
+  background: linear-gradient(0deg, rgba(28, 28, 28, 0.5), rgba(28, 28, 28, 0.5)), url("./img/header-bg.png");
   position: relative;
   background-position: center;
   background-size: cover;
