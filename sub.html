@@ -1,0 +1,1088 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eightyseven.ru/bot">
+<meta http-equiv="content-language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Бот | EightySeven</title>
+<meta name="keywords" content="">
+<meta name="description" content="Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
+    
+        
+    <link rel="stylesheet" href="./index.css" type="text/css"> 
+    <script src="js/ab5c2033bd.js" crossorigin="anonymous"></script>
+    
+    
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+           ym(75735559, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+           });
+        </script>
+        <!-- /Yandex.Metrika counter -->
+    
+    
+    
+        <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init("VK-RTRG-1080317-cIgH7"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="rtrg-1?p=VK-RTRG-1080317-cIgH7" style="position:fixed; left:-999px;" alt=""></noscript>
+    
+        <!-- Google Font "Ubuntu" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" rel="stylesheet">
+    
+    <!-- Links -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eightyseven.ru/">
+    <meta property="og:title" content="EightySeven | Главная">
+    <meta property="og:description" content="Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!">
+    <meta property="og:image" content="/img/logo.png">
+
+    <style>
+        #commands .carousel-item {
+            position: relative;
+            padding-bottom: 44.8959%;
+        }
+        
+        #commands .carousel-item iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .languages {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 73px;
+            top: 64px;
+        }
+        
+        .languages a.lang-ru {
+            margin-right: 32px;
+        }
+        
+        .languages a {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .languages a.active {
+            color: #FFF;
+        }
+        
+        .languages-ru-svg {
+            background-image: url("data:image/svg+xml,%3Csvg width='29' height='22' viewBox='0 0 29 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_903_188)'%3E%3Cmask id='mask0_903_188' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='-1' width='32' height='24'%3E%3Crect x='-1' y='-1' width='32' height='24' fill='white' /%3E%3C/mask%3E%3Cg mask='url(%23mask0_903_188)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V23H31V-1H-1Z' fill='%233D58DB' /%3E%3Cmask id='mask1_903_188' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='-1' width='32' height='24'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V23H31V-1H-1Z' fill='white' /%3E%3C/mask%3E%3Cg mask='url(%23mask1_903_188)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V7H31V-1H-1Z' fill='%23F7FCFF' /%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 15V23H31V15H-1Z' fill='%23C51918' /%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cpath d='M4 1H25V-1H4V1ZM28 4V18H30V4H28ZM25 21H4V23H25V21ZM1 18V4H-1V18H1ZM4 21C2.34315 21 1 19.6569 1 18H-1C-1 20.7614 1.23858 23 4 23V21ZM28 18C28 19.6569 26.6569 21 25 21V23C27.7614 23 30 20.7614 30 18H28ZM25 1C26.6569 1 28 2.34315 28 4H30C30 1.23858 27.7614 -1 25 -1V1ZM4 -1C1.23858 -1 -1 1.23858 -1 4H1C1 2.34315 2.34315 1 4 1V-1Z' fill='%23888888' /%3E%3Cdefs%3E%3CclipPath id='clip0_903_188'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H25C27.2091 0 29 1.79086 29 4V18C29 20.2091 27.2091 22 25 22H4C1.79086 22 0 20.2091 0 18V4Z' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+            padding-left: 26px;
+            width: 29px;
+            height: 22px;
+            display: inline-block;
+            cursor: pointer;
+            background-size: contain;
+            margin: 0 10px 0 0;
+        }
+        
+        .languages-en-svg {
+            background-image: url("data:image/svg+xml,%3Csvg width='29' height='22' viewBox='0 0 29 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_903_221)'%3E%3Cmask id='mask0_903_221' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='-1' width='32' height='24'%3E%3Crect x='-1' y='-1' width='32' height='24' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_903_221)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1H31V23H-1V-1Z' fill='%23F7FCFF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 13.6666V15.6666H31V13.6666H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 17.3334V19.3334H31V17.3334H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 6.33337V8.33337H31V6.33337H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 21V23H31V21H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 10V12H31V10H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V1H31V-1H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 2.66663V4.66663H31V2.66663H-1Z' fill='%23E31D1C'/%3E%3Crect x='-1' y='-1' width='20' height='13' fill='%232E42A5'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.722089 1.93871L-0.00379086 2.44759L0.241274 1.54198L-0.403442 0.968071H0.438645L0.721074 0.229004L1.05225 0.968071H1.7701L1.20607 1.54198L1.42443 2.44759L0.722089 1.93871ZM4.72209 1.93871L3.99621 2.44759L4.24127 1.54198L3.59656 0.968071H4.43864L4.72107 0.229004L5.05225 0.968071H5.7701L5.20607 1.54198L5.42443 2.44759L4.72209 1.93871ZM7.99621 2.44759L8.72209 1.93871L9.42443 2.44759L9.20607 1.54198L9.7701 0.968071H9.05225L8.72107 0.229004L8.43864 0.968071H7.59656L8.24127 1.54198L7.99621 2.44759ZM12.7221 1.93871L11.9962 2.44759L12.2413 1.54198L11.5966 0.968071H12.4386L12.7211 0.229004L13.0522 0.968071H13.7701L13.2061 1.54198L13.4244 2.44759L12.7221 1.93871ZM-0.00379086 6.44759L0.722089 5.93871L1.42443 6.44759L1.20607 5.54198L1.7701 4.96807H1.05225L0.721074 4.229L0.438645 4.96807H-0.403442L0.241274 5.54198L-0.00379086 6.44759ZM4.72209 5.93871L3.99621 6.44759L4.24127 5.54198L3.59656 4.96807H4.43864L4.72107 4.229L5.05225 4.96807H5.7701L5.20607 5.54198L5.42443 6.44759L4.72209 5.93871ZM7.99621 6.44759L8.72209 5.93871L9.42443 6.44759L9.20607 5.54198L9.7701 4.96807H9.05225L8.72107 4.229L8.43864 4.96807H7.59656L8.24127 5.54198L7.99621 6.44759ZM12.7221 5.93871L11.9962 6.44759L12.2413 5.54198L11.5966 4.96807H12.4386L12.7211 4.229L13.0522 4.96807H13.7701L13.2061 5.54198L13.4244 6.44759L12.7221 5.93871ZM-0.00379086 10.4476L0.722089 9.93871L1.42443 10.4476L1.20607 9.54198L1.7701 8.96807H1.05225L0.721074 8.229L0.438645 8.96807H-0.403442L0.241274 9.54198L-0.00379086 10.4476ZM4.72209 9.93871L3.99621 10.4476L4.24127 9.54198L3.59656 8.96807H4.43864L4.72107 8.229L5.05225 8.96807H5.7701L5.20607 9.54198L5.42443 10.4476L4.72209 9.93871ZM7.99621 10.4476L8.72209 9.93871L9.42443 10.4476L9.20607 9.54198L9.7701 8.96807H9.05225L8.72107 8.229L8.43864 8.96807H7.59656L8.24127 9.54198L7.99621 10.4476ZM12.7221 9.93871L11.9962 10.4476L12.2413 9.54198L11.5966 8.96807H12.4386L12.7211 8.229L13.0522 8.96807H13.7701L13.2061 9.54198L13.4244 10.4476L12.7221 9.93871ZM15.9962 2.44759L16.7221 1.93871L17.4244 2.44759L17.2061 1.54198L17.7701 0.968071H17.0522L16.7211 0.229004L16.4386 0.968071H15.5966L16.2413 1.54198L15.9962 2.44759ZM16.7221 5.93871L15.9962 6.44759L16.2413 5.54198L15.5966 4.96807H16.4386L16.7211 4.229L17.0522 4.96807H17.7701L17.2061 5.54198L17.4244 6.44759L16.7221 5.93871ZM15.9962 10.4476L16.7221 9.93871L17.4244 10.4476L17.2061 9.54198L17.7701 8.96807H17.0522L16.7211 8.229L16.4386 8.96807H15.5966L16.2413 9.54198L15.9962 10.4476ZM2.72209 3.93871L1.99621 4.44759L2.24127 3.54198L1.59656 2.96807H2.43864L2.72107 2.229L3.05225 2.96807H3.7701L3.20607 3.54198L3.42443 4.44759L2.72209 3.93871ZM5.99621 4.44759L6.72209 3.93871L7.42443 4.44759L7.20607 3.54198L7.7701 2.96807H7.05225L6.72107 2.229L6.43864 2.96807H5.59656L6.24127 3.54198L5.99621 4.44759ZM10.7221 3.93871L9.99621 4.44759L10.2413 3.54198L9.59656 2.96807H10.4386L10.7211 2.229L11.0522 2.96807H11.7701L11.2061 3.54198L11.4244 4.44759L10.7221 3.93871ZM1.99621 8.44759L2.72209 7.93871L3.42443 8.44759L3.20607 7.54198L3.7701 6.96807H3.05225L2.72107 6.229L2.43864 6.96807H1.59656L2.24127 7.54198L1.99621 8.44759ZM6.72209 7.93871L5.99621 8.44759L6.24127 7.54198L5.59656 6.96807H6.43864L6.72107 6.229L7.05225 6.96807H7.7701L7.20607 7.54198L7.42443 8.44759L6.72209 7.93871ZM9.99621 8.44759L10.7221 7.93871L11.4244 8.44759L11.2061 7.54198L11.7701 6.96807H11.0522L10.7211 6.229L10.4386 6.96807H9.59656L10.2413 7.54198L9.99621 8.44759ZM14.7221 3.93871L13.9962 4.44759L14.2413 3.54198L13.5966 2.96807H14.4386L14.7211 2.229L15.0522 2.96807H15.7701L15.2061 3.54198L15.4244 4.44759L14.7221 3.93871ZM13.9962 8.44759L14.7221 7.93871L15.4244 8.44759L15.2061 7.54198L15.7701 6.96807H15.0522L14.7211 6.229L14.4386 6.96807H13.5966L14.2413 7.54198L13.9962 8.44759Z' fill='%23F7FCFF'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_903_221'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H25C27.2091 0 29 1.79086 29 4V18C29 20.2091 27.2091 22 25 22H4C1.79086 22 0 20.2091 0 18V4Z' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            padding-left: 26px;
+            width: 29px;
+            height: 22px;
+            display: inline-block;
+            cursor: pointer;
+            background-size: contain;
+            margin: 0 10px 0 0;
+        }
+    </style>
+    
+</head>
+
+<body>
+    
+    <script src="./js/jquery.js"></script>    
+        
+<div class="loader-bg" id="preloader">
+    <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+    </div>
+</div>
+<header>
+    <div class="container-fluid p-0 header-outer" id="main">
+        
+        <div class="languages">
+            <a class="lang-ru active" href="https://eightyseven.ru/sub"><div class="languages-ru-svg lang-ru"></div> Русский</a>
+            <a class="lang-en " href="https://eightyseven.ru/sub/en"><div class="languages-en-svg lang-en"></div> English</a>
+        </div>
+
+        <div class="text-center header-inner">
+            <div class="row m-0">
+                <div class="col-lg-7 align-self-center text-center m-auto">
+                    <h1 class="mx-4" style="font-size: 75px;" >EightySeven Bot</h1>
+                </div>
+            </div>
+             <div class="row my-3 mx-0">
+                <div class="col-lg-5 align-self-center text-center m-auto">
+                    <h3>Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!</h3>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-12 align-self-center text-center">
+                    <a href="#invite"><button class="dwnl-btn">Пригласить на сервер</button></a>
+                    <a href="#sub"><button class="prem-btn">Оформить подписку</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container-fluid">
+        
+        <!-- <section class="library col-md-12 col-lg-9 mx-auto">
+            <div class="text-center my-5 element-animation" id="news">
+                <h2>Последние новости</h2>
+            </div>
+
+        <div id="wrapper" style="border-radius: 25px;">
+            <ul id="slideContainer">                   
+                <li>
+                    <img src="img/updates/siteupdate.PNG" width="100%" height="100%"/> 
+                  <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/site2-0.png" width="100%" height="100%"/> 
+                    <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/siteupdate.PNG" width="100%" height="100%"/> 
+                  <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/site2-0.png" width="100%" height="100%"/> 
+                    <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/siteupdate.PNG" width="100%" height="100%"/> 
+                  <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+            </ul>       
+        </div> 
+        </section> -->
+
+        <section class="library col-md-12 col-lg-9 mx-auto">
+            <div class="text-center my-5 element-animation" id="functions">
+                <h2>Функционал бота</h2>
+            </div>
+
+            <div class="row mb-5 element-animation" id="library">
+                <div class="col-xl-6 col-lg-12">
+                    <div class="mods">
+                        <div class="scroll">
+                            <div class="row library-out" style="opacity: 1;">
+
+                            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/ping.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Узнать задержку</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library//serverinfo.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Информация о сервере</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/user.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Информация о пользователе</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/say.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Писать от имени бота</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/sayembed.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Писать от имени бота в embed</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/clear.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Очистить чат</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/slowmode.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Управление медленным режимом</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/math.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Решить выражение</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/t.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Транслит</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/emoji.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Информация о эмодзи</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/rand.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Рандомное число</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/timer.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Таймер</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/library/8ball.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Рандомный ответ да/нет</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="col-xl-6 col-lg-12 mobile-center">
+                    <h3 class="my-3">Библиотека команд</h3>
+                    <p class="mb-4">
+                        Это качественные команды, имеющуюся далеко не в каждых ботах.
+                    </p>
+                    <p>Каждые две недели список пополняется новыми командами – Вы получаете к ним мгновенный доступ.</p>
+                </div>
+            </div>
+
+            <div class="row element-animation" id="music">
+                <div class="col-xl-6 col-lg-12">
+                    <img class="w-100" src="/img/library/music.png" alt="music">
+                </div>
+                <div class="col-xl-6 col-lg-12 mobile-center">
+                    <h3 class="my-3">Музыка</h3>
+                    <p class="mb-4">Воспользуйтесь возможностями бота «EightySeven», чтобы послушать музыку вместе с друзьями и хорошо провести время!</p>
+                    <p class="mb-4">Включайте любую музыку без ограничений, а так-же с удобным управлением кнопками!</p>
+                </div>
+            </div>
+
+        <p><br>
+        </p>
+
+            <div class="row element-animation" id="cmd">
+                <div class="col-xl-6 col-lg-12">
+                    <img class="w-100" src="/img/library/customcmd.png" alt="cmd">
+                </div>
+                <div class="col-xl-6 col-lg-12 mobile-center">
+                    <h3 class="my-3">Пользовательские команды</h3>
+                    <p class="mb-4">Создавайте свои команды исключительно для своих серверов, используя «EightySeven»!</p>
+                    <p class="mb-4" style="color: #7c7c7c">Для подключения необходимо создать обращение в тех. поддержку</p>
+                </div>
+            </div>
+
+        <p><br>
+        </p>
+
+            <div class="row element-animation" id="counter">
+                <div class="col-xl-6 col-lg-12">
+                    <img class="w-100" src="/img/library/counter.png" alt="counter">
+                </div>
+                <div class="col-xl-6 col-lg-12 mobile-center">
+                    <h3 class="my-3">Счётчик сообщений</h3>
+                    <p class="mb-4">Бот умеет считать количество сообщений, написанное пользователем. Для подключения этой функции требуется создать обращение в тех. поддержку.</p>
+                    <p class="mb-4" style="color: #7c7c7c">Для подключения необходимо создать обращение в тех. поддержку</p>
+                </div>
+            </div>
+
+        <p><br>
+        </p>
+
+            <div class="row element-animation" id="redirect">
+                <div class="col-xl-6 col-lg-12">
+                    <img class="w-100" src="/img/library/redirect.png" alt="redirect">
+                </div>
+                <div class="col-xl-6 col-lg-12 mobile-center">
+                    <h3 class="my-3">Страница переадресации</h3>
+                    <p class="mb-4">Специально для Вас будет создана страница переадресации, например eightyseven.ru/discord.</p>
+                    <p class="mb-4" style="color: #7c7c7c">Для подключения необходимо создать обращение в тех. поддержку</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="video col-md-12 col-lg-9 mx-auto" id="commands">
+            <div class="text-center my-5 mx-auto">
+                <h2 class="my-4">Полный список команд</h2>
+                <h4 class="w-75 mx-auto">Пригласите и получите полный список команд, доступных в <span class="gold">EightySeven</span>. Это лучше, чем вручную.</h4>
+            </div>
+            <div class="container-fluid p-0 media">
+                <div id="carouselExampleSlidesOnly" class="carousel slide mx-auto w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <iframe type="text/html" style="border-radius: 25px;" frameborder="0" width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/7OXKg8oHxqQ?autoplay=1&mute=1&iv_load_policy=3&loop=1&playlist=7OXKg8oHxqQ&modestbranding=1&rel=0&showinfo=0" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+
+        <script src="/js/anim.js"></script>
+
+        <section class="plus col-sm-12 col-md-12 col-xl-9 mx-auto">
+            <div class="my-5 mobile-center">
+                <h5 class="mt-4">Другие преимущества</h5>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Работа 24/7</h3>
+                            <hr>
+                            <p>
+                                Наш бот работает 24/7 без выходных, а тех. работы чаще всего происходят незаметно!                           </p>
+                        </div>
+                    </div>
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Особая роль в Discord</h3>
+                            <hr>
+                            <p>
+                                Вы можете получить роль, всего лишь купить платную подписку! Вы получите доступ к особым чатам и будете выделяться на фоне остальных пользователей.                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4">
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Это навсегда</h3>
+                            <hr>
+                            <p>
+                                Пользовательские функции остаются на вашем сервере навсегда, даже после истечения срока подписки.                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Баги быстро фиксятся</h3>
+                            <hr>
+                            <p>
+                                В случае находки бага, Вы можете создать обращение в тех. поддержку, благодаря чему его быстро пофиксят!                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-4">
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Cчётчик сообщений</h3>
+                            <hr>
+                            <p>Бот умеет считать количество сообщений, написанное пользователем. Для подключения этой функции требуется создать обращение в тех. поддержку.                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Это выгодно</h3>
+                            <hr>
+                            <p>
+                                Чаще всего музыкальные функции даются за определённою сумму в месяц, мы же предоставляем совершенно бесплатный доступ к музыке без ограничений.                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="tariffs" id="invite">
+            <div class="text-center mt-5 w-75 mx-auto">
+                <h2 class="mt-4">Приглашаем Вас к нам!</h2>
+            </div>
+
+            <div class="row m-0">
+                <div class="m-auto">
+                    <div class="tariffs-block row justify-content-center">
+                        
+                        <div class="tariff" style="background-color: #202225; height: 360px;">
+                            <div class="row icon icon-bronze mb-2 mx-auto">
+                                <img src="/img/discord-logo.png" alt="Bronze">
+                                <h5 class="font-weight-bold">Добавить</h5>
+                            </div>
+                            <div class="row plus mb-4">
+                                <div class="payed" style="background-color: #2c2f33;">
+                                    <div class="text-center">
+                                        <div id="load" class="" style="display: block; height: 50px;">
+                                            <a>Основная возможность<br></a>
+                                            <a href="#library">
+                                            <div class="str mb-2">
+                                                <div class="mr-2">
+                                                    <i class="fas fa-th"></i>
+                                                </div><p class="pointer">Библиотека команд</p>
+                                                <i class="fas fa-chevron-right ml-2"></i>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                 </div>
+                                <!-- <div class="str mb-2" style="color: #6c6b7e;">
+                                    <div class="mr-2">
+                                        <i class="fas fa-xmark" style="color: #d10000;"></i>
+                                    </div>
+                                    <p>Тех. поддержка</p>
+                                </div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="row tariff-btn-block tariff-bronze">
+                                    <div class="tariff-btn w-100 h-100">
+                                        <a href="https://eightyseven.ru/bot" class="mt-4" style="transition: color 0.120s linear !important;" target="_blank">
+                                        <button type="submit" class="btn h-100 w-100">Пригласить</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tariff" style="background-color: #202225; height: 360px;">
+                            <iframe style="border-radius: 25px;" src="https://discord.com/widget?id=784816796103344138&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                            <div class="bottom">
+                                <div class="row tariff-btn-block tariff-bronze">
+                                    <div class="tariff-btn w-100 h-100">
+                                        <a href="https://eightyseven.ru/support" class="mt-4" style="transition: color 0.120s linear !important;" target="_blank">
+                                        <button type="submit" class="btn h-100 w-100">Тех. поддержка</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="m-auto">
+                    <div class="tariffs-block row justify-content-center" id="sub">
+                        
+                        <div class="tariff" style="background-color: #202225">
+                            <div class="row icon icon-bronze1 mb-2 mx-auto">
+                                <img src="img/bronze.svg" alt="Bronze">
+                                <h5 class="font-weight-bold">Bronze</h5>
+                            </div>
+                            <div class="row plus mb-4">
+                                <div class="payed" style="background-color: #2c2f33;">
+                                    <div class="text-center">
+                                        <div id="load" class="" style="display: block; height: 50px;">
+                                            <a>Основная возможность<br></a>
+                                            <div class="str mb-2" style="color: #fff;">
+                                                <div class="mr-2">
+                                                    <i class="fas fa-gem"></i>
+                                                </div>
+                                                <p>Поддержка разработчиков</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <br>
+                                    <a href="#redirect">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-link"></i>
+                                            </div>
+                                            <p class="pointer">Страницы переадресации</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <a href="https://boosty.to/mineduet5">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-eye"></i>
+                                            </div>
+                                            <p class="pointer">Эксклюзивные посты на Boosty</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fab fa-discord"></i>
+                                        </div>
+                                        <p>Особая роль в Discord</p>
+                                    </div>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <p>Приоритет в очереди</p>
+                                    </div>
+                                <!-- <div class="str mb-2" style="color: #6c6b7e;">
+                                    <div class="mr-2">
+                                        <i class="fas fa-xmark" style="color: #d10000;"></i>
+                                    </div>
+                                    <p>Тех. поддержка</p>
+                                </div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="row cost">
+                                    <p>
+                                        <span>25</span> ₽/30 дней                                    </p>
+                                </div>
+                                <div class="row tariff-btn-block tariff-bronze1">
+                                    <div class="tariff-btn w-100 h-100">
+                                        <a data-toggle="modal" data-target="#giftBronze" class="mt-4" style="transition: color 0.120s linear !important;" target="_blank">
+                                        <button type="submit" class="btn h-100 w-100">Приобрести</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       <div class="tariff" style="background-color: #202225">
+                            <div class="row icon icon-silver mb-2 mx-auto">
+                                <img src="img/silver.svg" alt="Silver">
+                                <h5 class="font-weight-bold">Silver</h5>
+                            </div>
+                            <div class="row plus mb-4">
+                                <div class="payed" style="background-color: #2c2f33;">
+                                    <div class="text-center">
+                                        <div id="load" class="" style="display: block; height: 50px;">
+                                            <a>Основная возможность<br></a>
+                                            <div class="str mb-2" style="color: #fff;">
+                                                <div class="mr-2">
+                                                    <i class="fas fa-gem"></i>
+                                                </div>
+                                                <p>Поддержка разработчиков</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <br>
+                                    <a href="#counter">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-comment"></i>
+                                            </div>
+                                            <p class="pointer">Счётчик сообщений</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#redirect">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-link"></i>
+                                            </div>
+                                            <p class="pointer">Страницы переадресации</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <a href="https://boosty.to/mineduet5">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-eye"></i>
+                                            </div>
+                                            <p class="pointer">Эксклюзивные посты на Boosty</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fab fa-discord"></i>
+                                        </div>
+                                        <p>Особая роль в Discord</p>
+                                    </div>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fab fa-telegram"></i>
+                                        </div>
+                                        <p>Доступ к Telegram каналу</p>
+                                    </div>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <p>Приоритет в очереди</p>
+                                    </div>
+                                <!-- <div class="str mb-2" style="color: #6c6b7e;">
+                                    <div class="mr-2">
+                                        <i class="fas fa-xmark" style="color: #d10000;"></i>
+                                    </div>
+                                    <p>Тех. поддержка</p>
+                                </div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="row cost">
+                                    <p>
+                                        <span>49</span> ₽/30 дней                                    </p>
+                                </div>
+                                <div class="row tariff-btn-block tariff-silver">
+                                    <div class="tariff-btn w-100 h-100">
+                                        <a data-toggle="modal" data-target="#giftSilver" class="mt-4" style="transition: color 0.120s linear !important;" target="_blank">
+                                        <button type="submit" class="btn h-100 w-100">Приобрести</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tariff" style="background-color: #202225">
+                            <div class="row icon icon-gold mb-2 mx-auto">
+                                <img src="img/gold.svg" alt="Gold">
+                                <h5 class="font-weight-bold">Gold</h5>
+                            </div>
+                            <div class="row plus mb-4">
+                                <div class="payed" style="background-color: #2c2f33;">
+                                    <div class="text-center">
+                                        <div id="load" class="" style="display: block; height: 50px;">
+                                            <a>Основная возможность<br></a>
+                                            <div class="str mb-2" style="color: #fff;">
+                                                <div class="mr-2">
+                                                    <i class="fas fa-gem"></i>
+                                                </div>
+                                                <p>Поддержка разработчиков</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <br>
+                                    <a href="#cmd">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-wrench"></i>
+                                            </div>
+                                            <p class="pointer">Пользовательские команды</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#counter">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-comment"></i>
+                                            </div>
+                                            <p class="pointer">Счётчик сообщений</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#redirect">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-link"></i>
+                                            </div>
+                                            <p class="pointer">Страницы переадресации</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <a href="https://boosty.to/mineduet5">
+                                        <div class="str mb-2">
+                                            <div class="mr-2">
+                                                <i class="fas fa-eye"></i>
+                                            </div>
+                                            <p class="pointer">Эксклюзивные посты на Boosty</p>
+                                            <i class="fas fa-chevron-right ml-2"></i>
+                                        </div>
+                                    </a>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fas fa-power-off"></i>
+                                        </div>
+                                        <p>Перезагрузка в любое время</p>
+                                    </div>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fas fa-file-archive"></i>
+                                        </div>
+                                        <p>Доступ к бета версиям сайта</p>
+                                    </div>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fab fa-discord"></i>
+                                        </div>
+                                        <p>Особая роль в Discord</p>
+                                    </div>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fab fa-telegram"></i>
+                                        </div>
+                                        <p>Доступ к Telegram каналу</p>
+                                    </div>
+                                    <div class="str mb-2" style="color: #fff;">
+                                        <div class="mr-2">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <p>Приоритет в очереди</p>
+                                    </div>
+                                <!-- <div class="str mb-2" style="color: #6c6b7e;">
+                                    <div class="mr-2">
+                                        <i class="fas fa-xmark" style="color: #d10000;"></i>
+                                    </div>
+                                    <p>Тех. поддержка</p>
+                                </div> -->
+                            </div>
+                            <div class="bottom">
+                                <div class="row cost">
+                                    <p>
+                                        <span>99</span> ₽/30 дней                                    </p>
+                                    </div>
+                                <div class="row tariff-btn-block tariff-gold">
+                                    <div class="tariff-btn w-100 h-100">
+                                        <a data-toggle="modal" data-target="#giftGold" class="mt-4" style="transition: color 0.120s linear !important;" target="_blank">
+                                        <button type="submit" class="btn h-100 w-100">Приобрести</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="text-center" style="font-size: 20px;">Для активации таких функций как:<br>Страница переадресации, Перезагрузка в любое время, Счётчик сообщений и Пользовательские команды<br>следует создать обращение в поддержку</h4>
+
+        </section>
+
+        <section class="questions pb-5">
+            <div class="text-center w-75 mt-5 mx-auto">
+                <h3 class="mb-4">Остались вопросы?</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <div id="accordionExample" class="accordion">
+
+                        <div class="card bg-transparent">
+                            <div id="headingOne" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Функционал бота бесплатный?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p class="mb-2">Конечно! Вы можете использовать весь функционал бота без ограничений.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingSix" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseSix" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Как получить доступ к Telegram каналу или роли Discord за приобретение платной подписки?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p class="mb-2">После покупки подписки роль выдаётся автоматически, а бот сам пригласит Вас в Telegram канал. Убедитесь, что у Вас привязаны все необходимые аккаунты.
+                                    <p>В случае, если Вам не выдалась роль или не пригласили в Telegram канал, просьба создать обращение в <a href="support.html" target="_blank">нашу тех. поддержку</a>.</p>                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingOneTwo" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseOneTwo" aria-controls="collapseOneTwo" class="btn btn-link text-white collapsible-link">
+                                        <p>Как пригласить бота?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOneTwo" aria-labelledby="headingOneTwo" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p>Вы можете сделать это <a href="invite.html" target="_blank">здесь</a> или используя кнопку выше.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingThree" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Кто разрабатывает бота?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <span class="font-weight-bold"><a href="https://vk.com/ka4ergaa" target="_blank">ka4ergaa</a> — </span>Основной разработчик.                                        </li>
+                                        <li>
+                                            <span class="font-weight-bold"><a href="https://vk.com/kirilla39yt" target="_blank">Kirilla39 (JusticeSkull)</a> — </span>Помощник разработки, частично сайт.                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingFive" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseFive" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Не получается пригласить бота</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p class="mb-2">Чтобы пригласить бота Вам необходимо иметь сервер, на котором Вы администратор. Если такая роль есть — то не факт, что Вам предоставлено это право.</p>
+                                    <p>В такой ситуации попросите пригласить бота другого администратора, стоящего выше Вас.</p>                        </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingNine" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseNine" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Хочу подарить подписку другому человеку. Как это сделать?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseNine" aria-labelledby="headingNine" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p class="mb-2">
+                                        При приобретении подписки выберите способ покупки в подарок. После оплаты вы получите ссылку – передайте её другому человеку, и он сможет активировать подписку.                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingSeven" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseSeven" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Где можно задать вопрос в тех. поддержку?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p class="mb-2">Вы можете задать любой вопрос, используя <a href="support.html" target="_blank">нашу тех. поддержку </a>в <a href="https://discord.gg/hxFzcYWhhd" target="_blank">Discord сервере</a>.</p>                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingEleven" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseEleven" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Как продлить статус?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseEleven" aria-labelledby="headingEleven" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p class="mb-2">
+                                        Приобретите повторно тот же статус, что и в прошлый раз.                                    </p>
+                                    <p class="mb-2">При активации новые
+                                        дни суммируются с текущими. Например, если у вас осталось 5 дней статуса, то после активации кода на 30 дней у Вас будет 35 дней статуса 
+                                        (5+30).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-transparent">
+                            <div id="headingTen" class="card-header bg-transparent border-0">
+                                <h2 class="mb-0">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseTen" aria-controls="collapseOne" class="btn btn-link text-white collapsible-link">
+                                        <p>Хочу поднять уровень статуса. Как это сделать?</p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTen" aria-labelledby="headingTen" data-parent="#accordionExample" class="collapse">
+                                <div class="card-body">
+                                    <p class="mb-2">Приобретите новую со статусом нужного уровня. После активации старый статус сохранится: он продолжит действовать по истечении срока нового статуса..</p>
+                                    <p>Например, если у Вас осталось 14 дней статуса Silver, и вы активировали Gold на 30 дней, то по истечении этих 30 дней статус Silver автоматически продолжит действовать следующие 14 дней.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer>
+        <div class="text-center">
+            <span>Оформление подписок создано с помощью</span>
+            <a href="https://boosty.to/"><img src="img/boosty.png" style="width: 60px; margin-left: 5px; margin-bottom: 6px;"></a>
+        </div>
+</footer>
+
+<div class="modal fade" id="giftGold" tabindex="-1" role="dialog" aria-labelledby="giftTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #252525; border-radius: 25px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftTitle">Приобрести подписку уровня Gold</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                
+                <p>Вы покупаете для себя или в подарок? Выберите один из вариантов.</p>
+                    
+                <a href="https://boosty.to/mineduet5/purchase/53310"><button class="prem-btn"> Купить для себя</button></a>
+                <a href="https://boosty.to/mineduet5/purchase-gift"><button class="prem-btn"> Купить в подарок</button></a>
+                            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="giftSilver" tabindex="-1" role="dialog" aria-labelledby="giftTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #252525; border-radius: 25px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftTitle">Приобрести подписку уровня Silver</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                
+                <p>Вы покупаете для себя или в подарок? Выберите один из вариантов.</p>
+                    
+                <a href="https://boosty.to/mineduet5/purchase/53301"><button class="prem-btn" style="border-color: #cbc9ce;"> Купить для себя</button></a>
+                <a href="https://boosty.to/mineduet5/purchase-gift"><button class="prem-btn" style="border-color: #cbc9ce;"> Купить в подарок</button></a>
+                            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="giftBronze" tabindex="-1" role="dialog" aria-labelledby="giftTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #252525; border-radius: 25px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftTitle">Приобрести подписку уровня Bronze</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                
+                <p>Вы покупаете для себя или в подарок? Выберите один из вариантов.</p>
+                    
+                <a href="https://boosty.to/mineduet5/purchase/53298"><button class="prem-btn" style="border-color: #cd7f32;"> Купить для себя</button></a>
+                <a href="https://boosty.to/mineduet5/purchase-gift"><button class="prem-btn" style="border-color: #cd7f32;"> Купить в подарок</button></a>
+                            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/scriptn3.js"></script>
+<script src="/js/bootstrap.js"></script>
+    
+    
+    <script>
+        $(window).on('resize', function() {
+            $('.tariffs-discount').css('width', $('.tariffs-block').width() - 60);
+        })
+
+        function remove_hash_from_url()
+{
+    var uri = window.location.toString();
+    if (uri.indexOf("#") > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf("#"));
+        window.history.replaceState({}, document.title, clean_uri);
+    }
+}
+
+window.onhashchange = remove_hash_from_url;
+
+    </script>
+    
+</body>
+
+</html>
