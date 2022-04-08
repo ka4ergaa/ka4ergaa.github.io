@@ -240,4 +240,5 @@ function scrolling() {
   window.swipeyObj = swipey; //expose to global window object
 })();
 
-window.onload = function() { swipeyObj.initSwipey(); }  //invoke the init method to get started */
+window.onload = function() { swipeyObj.initSwipey(); }  //invoke the init method to get started
+*/
