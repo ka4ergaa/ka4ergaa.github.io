@@ -1,0 +1,665 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eightyseven.ru/bot">
+<meta http-equiv="content-language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Бот | EightySeven</title>
+<meta name="keywords" content="">
+<meta name="description" content="Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
+    
+        
+    <link rel="stylesheet" href="./mods.css" type="text/css"> 
+    <script src="js/ab5c2033bd.js" crossorigin="anonymous"></script>
+    
+    
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+           ym(75735559, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+           });
+        </script>
+        <!-- /Yandex.Metrika counter -->
+    
+    
+    
+        <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init("VK-RTRG-1080317-cIgH7"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="rtrg-1?p=VK-RTRG-1080317-cIgH7" style="position:fixed; left:-999px;" alt=""></noscript>
+    
+        <!-- Google Font "Ubuntu" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" rel="stylesheet">
+    
+    <!-- Links -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eightyseven.ru/">
+    <meta property="og:title" content="EightySeven | Главная">
+    <meta property="og:description" content="Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!">
+    <meta property="og:image" content="/img/logo.png">
+
+    <style>
+        #commands .carousel-item {
+            position: relative;
+            padding-bottom: 44.8959%;
+        }
+        
+        #commands .carousel-item iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .languages {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 73px;
+            top: 64px;
+        }
+        
+        .languages a.lang-ru {
+            margin-right: 32px;
+        }
+        
+        .languages a {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .languages a.active {
+            color: #FFF;
+        }
+        
+        .languages-ru-svg {
+            background-image: url("data:image/svg+xml,%3Csvg width='29' height='22' viewBox='0 0 29 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_903_188)'%3E%3Cmask id='mask0_903_188' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='-1' width='32' height='24'%3E%3Crect x='-1' y='-1' width='32' height='24' fill='white' /%3E%3C/mask%3E%3Cg mask='url(%23mask0_903_188)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V23H31V-1H-1Z' fill='%233D58DB' /%3E%3Cmask id='mask1_903_188' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='-1' width='32' height='24'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V23H31V-1H-1Z' fill='white' /%3E%3C/mask%3E%3Cg mask='url(%23mask1_903_188)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V7H31V-1H-1Z' fill='%23F7FCFF' /%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 15V23H31V15H-1Z' fill='%23C51918' /%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cpath d='M4 1H25V-1H4V1ZM28 4V18H30V4H28ZM25 21H4V23H25V21ZM1 18V4H-1V18H1ZM4 21C2.34315 21 1 19.6569 1 18H-1C-1 20.7614 1.23858 23 4 23V21ZM28 18C28 19.6569 26.6569 21 25 21V23C27.7614 23 30 20.7614 30 18H28ZM25 1C26.6569 1 28 2.34315 28 4H30C30 1.23858 27.7614 -1 25 -1V1ZM4 -1C1.23858 -1 -1 1.23858 -1 4H1C1 2.34315 2.34315 1 4 1V-1Z' fill='%23888888' /%3E%3Cdefs%3E%3CclipPath id='clip0_903_188'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H25C27.2091 0 29 1.79086 29 4V18C29 20.2091 27.2091 22 25 22H4C1.79086 22 0 20.2091 0 18V4Z' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+            padding-left: 26px;
+            width: 29px;
+            height: 22px;
+            display: inline-block;
+            cursor: pointer;
+            background-size: contain;
+            margin: 0 10px 0 0;
+        }
+        
+        .languages-en-svg {
+            background-image: url("data:image/svg+xml,%3Csvg width='29' height='22' viewBox='0 0 29 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_903_221)'%3E%3Cmask id='mask0_903_221' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='-1' width='32' height='24'%3E%3Crect x='-1' y='-1' width='32' height='24' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_903_221)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1H31V23H-1V-1Z' fill='%23F7FCFF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 13.6666V15.6666H31V13.6666H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 17.3334V19.3334H31V17.3334H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 6.33337V8.33337H31V6.33337H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 21V23H31V21H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 10V12H31V10H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 -1V1H31V-1H-1Z' fill='%23E31D1C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-1 2.66663V4.66663H31V2.66663H-1Z' fill='%23E31D1C'/%3E%3Crect x='-1' y='-1' width='20' height='13' fill='%232E42A5'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.722089 1.93871L-0.00379086 2.44759L0.241274 1.54198L-0.403442 0.968071H0.438645L0.721074 0.229004L1.05225 0.968071H1.7701L1.20607 1.54198L1.42443 2.44759L0.722089 1.93871ZM4.72209 1.93871L3.99621 2.44759L4.24127 1.54198L3.59656 0.968071H4.43864L4.72107 0.229004L5.05225 0.968071H5.7701L5.20607 1.54198L5.42443 2.44759L4.72209 1.93871ZM7.99621 2.44759L8.72209 1.93871L9.42443 2.44759L9.20607 1.54198L9.7701 0.968071H9.05225L8.72107 0.229004L8.43864 0.968071H7.59656L8.24127 1.54198L7.99621 2.44759ZM12.7221 1.93871L11.9962 2.44759L12.2413 1.54198L11.5966 0.968071H12.4386L12.7211 0.229004L13.0522 0.968071H13.7701L13.2061 1.54198L13.4244 2.44759L12.7221 1.93871ZM-0.00379086 6.44759L0.722089 5.93871L1.42443 6.44759L1.20607 5.54198L1.7701 4.96807H1.05225L0.721074 4.229L0.438645 4.96807H-0.403442L0.241274 5.54198L-0.00379086 6.44759ZM4.72209 5.93871L3.99621 6.44759L4.24127 5.54198L3.59656 4.96807H4.43864L4.72107 4.229L5.05225 4.96807H5.7701L5.20607 5.54198L5.42443 6.44759L4.72209 5.93871ZM7.99621 6.44759L8.72209 5.93871L9.42443 6.44759L9.20607 5.54198L9.7701 4.96807H9.05225L8.72107 4.229L8.43864 4.96807H7.59656L8.24127 5.54198L7.99621 6.44759ZM12.7221 5.93871L11.9962 6.44759L12.2413 5.54198L11.5966 4.96807H12.4386L12.7211 4.229L13.0522 4.96807H13.7701L13.2061 5.54198L13.4244 6.44759L12.7221 5.93871ZM-0.00379086 10.4476L0.722089 9.93871L1.42443 10.4476L1.20607 9.54198L1.7701 8.96807H1.05225L0.721074 8.229L0.438645 8.96807H-0.403442L0.241274 9.54198L-0.00379086 10.4476ZM4.72209 9.93871L3.99621 10.4476L4.24127 9.54198L3.59656 8.96807H4.43864L4.72107 8.229L5.05225 8.96807H5.7701L5.20607 9.54198L5.42443 10.4476L4.72209 9.93871ZM7.99621 10.4476L8.72209 9.93871L9.42443 10.4476L9.20607 9.54198L9.7701 8.96807H9.05225L8.72107 8.229L8.43864 8.96807H7.59656L8.24127 9.54198L7.99621 10.4476ZM12.7221 9.93871L11.9962 10.4476L12.2413 9.54198L11.5966 8.96807H12.4386L12.7211 8.229L13.0522 8.96807H13.7701L13.2061 9.54198L13.4244 10.4476L12.7221 9.93871ZM15.9962 2.44759L16.7221 1.93871L17.4244 2.44759L17.2061 1.54198L17.7701 0.968071H17.0522L16.7211 0.229004L16.4386 0.968071H15.5966L16.2413 1.54198L15.9962 2.44759ZM16.7221 5.93871L15.9962 6.44759L16.2413 5.54198L15.5966 4.96807H16.4386L16.7211 4.229L17.0522 4.96807H17.7701L17.2061 5.54198L17.4244 6.44759L16.7221 5.93871ZM15.9962 10.4476L16.7221 9.93871L17.4244 10.4476L17.2061 9.54198L17.7701 8.96807H17.0522L16.7211 8.229L16.4386 8.96807H15.5966L16.2413 9.54198L15.9962 10.4476ZM2.72209 3.93871L1.99621 4.44759L2.24127 3.54198L1.59656 2.96807H2.43864L2.72107 2.229L3.05225 2.96807H3.7701L3.20607 3.54198L3.42443 4.44759L2.72209 3.93871ZM5.99621 4.44759L6.72209 3.93871L7.42443 4.44759L7.20607 3.54198L7.7701 2.96807H7.05225L6.72107 2.229L6.43864 2.96807H5.59656L6.24127 3.54198L5.99621 4.44759ZM10.7221 3.93871L9.99621 4.44759L10.2413 3.54198L9.59656 2.96807H10.4386L10.7211 2.229L11.0522 2.96807H11.7701L11.2061 3.54198L11.4244 4.44759L10.7221 3.93871ZM1.99621 8.44759L2.72209 7.93871L3.42443 8.44759L3.20607 7.54198L3.7701 6.96807H3.05225L2.72107 6.229L2.43864 6.96807H1.59656L2.24127 7.54198L1.99621 8.44759ZM6.72209 7.93871L5.99621 8.44759L6.24127 7.54198L5.59656 6.96807H6.43864L6.72107 6.229L7.05225 6.96807H7.7701L7.20607 7.54198L7.42443 8.44759L6.72209 7.93871ZM9.99621 8.44759L10.7221 7.93871L11.4244 8.44759L11.2061 7.54198L11.7701 6.96807H11.0522L10.7211 6.229L10.4386 6.96807H9.59656L10.2413 7.54198L9.99621 8.44759ZM14.7221 3.93871L13.9962 4.44759L14.2413 3.54198L13.5966 2.96807H14.4386L14.7211 2.229L15.0522 2.96807H15.7701L15.2061 3.54198L15.4244 4.44759L14.7221 3.93871ZM13.9962 8.44759L14.7221 7.93871L15.4244 8.44759L15.2061 7.54198L15.7701 6.96807H15.0522L14.7211 6.229L14.4386 6.96807H13.5966L14.2413 7.54198L13.9962 8.44759Z' fill='%23F7FCFF'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_903_221'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H25C27.2091 0 29 1.79086 29 4V18C29 20.2091 27.2091 22 25 22H4C1.79086 22 0 20.2091 0 18V4Z' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            padding-left: 26px;
+            width: 29px;
+            height: 22px;
+            display: inline-block;
+            cursor: pointer;
+            background-size: contain;
+            margin: 0 10px 0 0;
+        }
+    </style>
+    
+</head>
+
+<body>
+    
+    <script src="./js/jquery.js"></script>    
+        
+<div class="loader-bg" id="preloader">
+    <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+    </div>
+</div>
+<header>
+    <div class="container-fluid p-0 header-outer" id="main">
+
+        <div class="text-center header-inner">
+            <div class="row m-0">
+                <div class="col-lg-7 align-self-center text-center m-auto">
+                    <h1 class="mx-4">Устанавливайте Minecraft моды автоматически</h1>
+                </div>
+            </div>
+             <div class="row my-3 mx-0">
+                <div class="col-lg-5 align-self-center text-center m-auto">
+                    <h3>Приложение EightySeven Mods автоматически установит нужные вам моды, сборки, а так-же шейдеры</h3>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-12 align-self-center text-center">
+                    <a href="https://eightyseven.ru/downloads/EightySeven.exe"><button class="prem-btn">Скачать приложение</button></a>
+                    <a href="#more"><button class="dwnl-btn">Подробнее</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container-fluid">
+        
+        <!-- <section class="library col-md-12 col-lg-9 mx-auto">
+            <div class="text-center my-5 element-animation" id="news">
+                <h2>Последние новости</h2>
+            </div>
+
+        <div id="wrapper" style="border-radius: 25px;">
+            <ul id="slideContainer">                   
+                <li>
+                    <img src="img/updates/siteupdate.PNG" width="100%" height="100%"/> 
+                  <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/site2-0.png" width="100%" height="100%"/> 
+                    <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/siteupdate.PNG" width="100%" height="100%"/> 
+                  <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/site2-0.png" width="100%" height="100%"/> 
+                    <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+                <li>
+                    <img src="img/updates/siteupdate.PNG" width="100%" height="100%"/> 
+                  <div class="caption">&#160; Новый дизайн сайта<br><a style="font-weight: 100;">&#160; Полностью новый сайт и дизайн, а также самые ожидаемые возможности.</a><br><a href="#main"><button class="news-btn">Перейти</button></a></div>
+                </li>
+            </ul>       
+        </div> 
+        </section> -->
+
+        <section class="library col-md-12 col-lg-9 mx-auto">
+            <div class="text-center my-5 element-animation" id="more">
+                <h2>Преимущества приложения</h2>
+            </div>
+
+            <div class="row mb-5 element-animation" id="library">
+                <div class="col-xl-6 col-lg-12">
+                    <div class="mods">
+                        <div class="scroll">
+                            <div class="row library-out" style="opacity: 1;">
+
+                            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/optifine2.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Optifine + OptiFabric</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/sodium.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sodium</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/fabricapi.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fabric API</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/replay.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">ReplayMod</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/litematica.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Litematica</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/clickthro.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">ClickThrough</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/modmenu.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">ModMenu</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/dontdropit.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">DontDropIt</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/malilib.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">MaLiLib</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/spr.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sound Physics Remastered</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/footsteps.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Presence Footsteps</h5>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/plasmovoice.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">PlasmoVoice</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/skinlayers3d.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Skin Layers 3D</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/blur.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Blur</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/seus.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">SEUS Renewed</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/sildrus.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sildurs Vibrant</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/chocapic13.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chocapic13</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/bsl.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">BSL</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/nostalgia.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Nostalgia</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/kuda.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">KUDA</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/ka4ergaaVback.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Project Vanilla</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/ka4ergaaVRebornback.png)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Project Vanilla Reborn</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/options.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Настройки</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/lithium.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lithium</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="img card-img-top" style="background-image: url(img/mods/bfps.PNG)"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Better FPS - Render Distance</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="col-xl-6 col-lg-12 mobile-center">
+                    <h3 class="my-3">Библиотека модификаций</h3>
+                    <p>Каждое обновление список пополняется новыми модификациями – Вы получаете к ним мгновенный доступ, сразу же после обновлния до последней версии.</p>
+                </div>
+            </div>
+
+            <div class="row element-animation" id="optimization">
+                <div class="col-xl-6 col-lg-12">
+                    <img class="w-100" src="/img/mods/opt.PNG" alt="optimization">
+                </div>
+                <div class="col-xl-6 col-lg-12 mobile-center">
+                    <h3 class="my-3">Оптимизация</h3>
+                    <p class="mb-4">Воспользуйтесь возможностями раздела «Оптимизация», чтобы улучшить производительность игры, избавиться от зависаний, вылетов и непрогрузки текстур.</p>
+                    <p class="mb-4">Обширный выбор параметров позволит игре работать быстрее без заметного ухудшения графики.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="video col-md-12 col-lg-9 mx-auto" id="commands">
+            <div class="text-center my-5 mx-auto">
+                <h2 class="my-4">Самая красивая графика в Minecraft</h2>
+                <h4 class="w-75 mx-auto">Получите невероятное наслаждение от игрового процесса благодаря лучшим шейдерам для Minecraft, доступными в <span class="gold">EightySeven Mods</span>. Это лучше, чем ванилла.</h4>
+            </div>
+            <div class="container-fluid p-0 media">
+                <div id="carouselExampleSlidesOnly" class="carousel slide mx-auto w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <iframe type="text/html" style="border-radius: 25px;" frameborder="0" width="1920" height="1080" src="https://www.youtube-nocookie.com/embed/trhGJUy2tao?controls=0&autoplay=1&mute=1&iv_load_policy=3&loop=1&playlist=trhGJUy2tao&modestbranding=1&rel=0&showinfo=0" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+
+        <script src="/js/anim.js"></script>
+
+        <section class="plus col-sm-12 col-md-12 col-xl-9 mx-auto">
+            <div class="my-5 mobile-center">
+                <h5 class="mt-4">Другие преимущества</h5>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Автоустановка</h3>
+                            <hr>
+                            <p>
+                                Все модификации из библиотеки устанавливаются автоматически. Вам не нужно разбираться в инструкциях и бороться с вылетами – EightySeven Mods сделает всё за вас.                           </p>
+                        </div>
+                    </div>
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Это быстро                           </h3>
+                            <hr>
+                            <p>
+                                Все модификации и сборки устанавливаются не дольше 5 минут. Вам не придёться тратить много времени на ожидание.                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4">
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Полная совместимость</h3>
+                            <hr>
+                            <p>
+                                Модификации из библиотеки гарантированно работают на Minecraft, включая новейшую версию 1.18.1. Также модификации работают с Optifine и Sodium.                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-file-archive"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Установка посторонних модов</h3>
+                            <hr>
+                            <p>
+                                Устанавливайте моды из посторонних источников поверх EightySeven Mods, в том числе шейдеры и иной контент. Они будут работать без проблем.                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-4">
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Баги быстро фиксятся</h3>
+                            <hr>
+                            <p>
+                                В случае находки бага, Вы можете создать обращение в тех. поддержку, благодаря чему его быстро пофиксят!                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="ui-item">
+                        <div class="ui-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="ui-details">
+                            <h3>Автообновление</h3>
+                            <hr>
+                            <p>
+                                Все обновления устанавливаются автоматически, благодаря чему вы получаете доступ к многим модификациям без потери времени.                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="tariffs" id="sub">
+            <div class="text-center mt-5 w-75 mx-auto">
+                <h2 class="mt-4">И это далеко не всё!</h2>
+            </div>
+
+            <div class="row m-0">
+                <div class="m-auto">
+                    <div class="tariffs-block row justify-content-center">
+                        
+                        <a href="https://eightyseven.ru/downloads/EightySeven.exe"><button class="prem-btn">Скачать приложение</button></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<div class="modal fade" id="giftGold" tabindex="-1" role="dialog" aria-labelledby="giftTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #252525; border-radius: 25px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftTitle">Приобрести подписку уровня Gold</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                
+                <p>Вы покупаете для себя или в подарок? Выберите один из вариантов.</p>
+                    
+                <a href="https://boosty.to/mineduet5/purchase/53310"><button class="prem-btn"> Купить для себя</button></a>
+                <a href="https://boosty.to/mineduet5/purchase-gift"><button class="prem-btn"> Купить в подарок</button></a>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="giftSilver" tabindex="-1" role="dialog" aria-labelledby="giftTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #252525; border-radius: 25px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftTitle">Приобрести подписку уровня Silver</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                
+                <p>Вы покупаете для себя или в подарок? Выберите один из вариантов.</p>
+                    
+                <a href="https://boosty.to/mineduet5/purchase/53301"><button class="prem-btn" style="border-color: #cbc9ce;"> Купить для себя</button></a>
+                <a href="https://boosty.to/mineduet5/purchase-gift"><button class="prem-btn" style="border-color: #cbc9ce;"> Купить в подарок</button></a>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="giftBronze" tabindex="-1" role="dialog" aria-labelledby="giftTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #252525; border-radius: 25px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftTitle">Приобрести подписку уровня Bronze</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                
+                <p>Вы покупаете для себя или в подарок? Выберите один из вариантов.</p>
+                    
+                <a href="https://boosty.to/mineduet5/purchase/53298"><button class="prem-btn" style="border-color: #cd7f32;"> Купить для себя</button></a>
+                <a href="https://boosty.to/mineduet5/purchase-gift"><button class="prem-btn" style="border-color: #cd7f32;"> Купить в подарок</button></a>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/scriptn3.js"></script>
+<script src="/js/bootstrap.js"></script>
+    
+    
+    <script>
+        $(window).on('resize', function() {
+            $('.tariffs-discount').css('width', $('.tariffs-block').width() - 60);
+        })
+
+        function remove_hash_from_url()
+{
+    var uri = window.location.toString();
+    if (uri.indexOf("#") > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf("#"));
+        window.history.replaceState({}, document.title, clean_uri);
+    }
+}
+
+window.onhashchange = remove_hash_from_url;
+
+    </script>
+    
+</body>
+
+</html>

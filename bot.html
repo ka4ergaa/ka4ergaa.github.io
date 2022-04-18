@@ -7,7 +7,7 @@
     <meta name="robots" content="index, follow">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="app.css">
-    <title>EightySeven Bot</title>
+    <title>Бот | EightySeven</title>
     <meta name="description" content="Новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!">
     <link rel="canonical" href="bot.html">
 
@@ -127,13 +127,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-5 anim-down">
-                    <h4>EightySeven</h4>
+                    <h4>EightySeven Bot</h4>
                     <p>Это бесплатный, новый русскоязычный бот для Discord серверов, которого вы можете пригласить уже сейчас!</p>
                     <p>Это самый доступный способ сделать ваш сервер намного функциональней и удобней при минимальных усилиях.</p>
                 </div>
                 <div class="col-12 col-md-7 align-self-center text-center">
-                    <button class="dwnl-btn" data-toggle="modal" data-target="#modalChoice">Пригласить</button>
-                    <a href="https://discord.gg/hxFzcYWhhd" target="_blank"><button class="ds-btn">Discord</button></a>
+                    <button class="dwnl-btn" onclick="invite()" data-toggle="modal" data-target="#modalDownload">Пригласить</button>
+                    <a href="https://discord.gg/hxFzcYWhhd" target="_blank" ><button class="ds-btn">Discord</button></a>
                 </div>
             </div>
             <div class="row">
@@ -376,7 +376,7 @@
                     <p>Убедитесь, что у Вас имеется право администратора, для приглашения бота, а затем выдачи ему прав.</p>
                     <p>При необходимости всегда можно удалить бота с сервера – просто выгоните его, используя кнопку
                         «Выгнать» в контекстном меню.</p>
-                    <button class="btn btn-white" data-toggle="modal" data-target="#modalChoice">
+                    <button class="btn btn-white" onclick="invite()" data-toggle="modal" data-target="#modalDownload">
                         Пригласить
                     </button>
                 </div>
