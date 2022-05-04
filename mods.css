@@ -295,6 +295,15 @@ section {
   transition: all 0.3s;
 }
 
+.win {
+  filter: invert(1);
+  transition: all 0.3s;
+}
+
+.win:hover {
+  filter: invert(0);
+}
+
 .dwnl-btn:hover {
   background: #fff;
   color: #000;
@@ -356,7 +365,7 @@ section {
 
 .header-outer {
   height: 800px;
-  background: linear-gradient(0deg, rgba(28, 28, 28, 0.5), rgba(28, 28, 28, 0.5)), url("./img/updates/updateMODS2.png");
+  background: linear-gradient(0deg, rgba(28, 28, 28, 0.5), rgba(28, 28, 28, 0.5)), url("./img/mods/es04back.png");
   position: relative;
   background-position: center;
   background-size: cover;
