@@ -466,6 +466,6 @@ window.onload = function () {
   
  function invite(){
   setTimeout(function(){
-            location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot';
+            location.href = 'https://discord.com/api/oauth2/authorize?client_id=830474088073134142&permissions=8&scope=bot%20applications.commands';
         }, 2000);
       }
